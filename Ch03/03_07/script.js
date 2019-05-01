@@ -1,7 +1,18 @@
 (function() {
 "use strict";
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
 
-document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+	var btnEstimate = document.getElementById('btn.estimate');
+
+	if (state.value === '') {
+		btnEstimate.disable = true;
+	} else {
+		btnEstimate.disabled = false;
+	}
+}));
+
+
 
 function estimateTotal(event) {
 	event.preventDefault();
