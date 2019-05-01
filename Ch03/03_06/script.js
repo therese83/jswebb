@@ -1,20 +1,18 @@
 (function() {
-"use strict";
-
-document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
-
-function estimateTotal(event) {
-	event.preventDefault();
-
-	var state = document.getElementById('s-state');
+	"use strict";
 	
-	if (state.value === '') {
-		alert('Please choose your shipping state');
-
-		state.focus();
-
-		document.getElementById('s-state')
+	document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
+	
+	function estimateTotal(event) {
+		event.preventDefault();
+		
+		var state = document.getElementById('s-state');
+		
+		if (state.value === '') {
+			alert('Please choose your shipping state.');
+			
+			state.focus();
+		}
 	}
-}
-
-})();
+	
+	})();
