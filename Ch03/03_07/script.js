@@ -3,13 +3,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('cart-hplus').addEventListener('submit', estimateTotal);
 
-	var btnEstimate = document.getElementById('btn.estimate');
+	var btnEstimate = document.getElementById('btn-estimate');
 
-	if (state.value === '') {
-		btnEstimate.disable = true;
-	} else {
-		btnEstimate.disabled = false;
-	}
+	btnEstimate.disabled = true;
+
+	state.addEventListener('change', function(){
+		
+		if (state.value === '') {
+			btnEstimate.disable = true;
+		} else {
+			btnEstimate.disabled = false;
+		}
+
+	});
+
+	var btnEstimate = document.getElementById('btn-estimate');
+
+	
 }));
 
 
