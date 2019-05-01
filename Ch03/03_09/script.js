@@ -36,7 +36,18 @@ function estimateTotal(event) {
 		shippingState = state.value,
 		shippingMethod = document.querySelector('[name=r_method]:checked').value;
 		
-	console.log(itemBball, itemJersey, itemPower, shippingState, shippingMethod);
+	var totalQty = itemBball + itemJersey + itemPower;
+		shippingCostPer,
+		taxFactor,
+		estimate;
+
+		estimate =(90 * itemBball) + (25 *itemJersy) + (30 * itemPower);
+
+		document.getElementById('txt-estimate').value = estimate;
+	}
+	
+
+	
 }
 
 })();
