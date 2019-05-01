@@ -30,9 +30,9 @@ function estimateTotal(event) {
 		state.focus();
 	}
 	
-	var itemBball = document.getElementById('txt-q-bball').value,
-		itemJersey = document.getElementById('txt-q-jersey').value,
-		itemPower = document.getElementById('txt-q-power').value,
+	var itemBball = parseInt(document.getElementById('txt-q-bball').value, 10),
+		itemJersey = parseInt(document.getElementById('txt-q-jersey').value, 10),
+		itemPower = parsInt(document.getElementById('txt-q-power').value, 10),
 		shippingState = state.value,
 		shippingMethod = document.querySelector('[name=r_method]:checked').value;
 		
