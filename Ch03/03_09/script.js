@@ -38,15 +38,31 @@ function estimateTotal(event) {
 		
 	var totalQty = itemBball + itemJersey + itemPower,
 		shippingCostPer,
-		taxFactor =1,
+		shippingCost,
+		taxFactor = 1,
 		estimate;
-		totalItemPrice =(90 * itemBball) + (25 *itemJersy) + (30 * itemPower);
+		totalItemPrice =(90 * itemBball) + (25 * itemJersy) + (30 * itemPower);
 
 		if (shippingState === 'CA'){
 			taxFactor = 1.075;
 		} 
 
-		estimate = totalItemPrice * taxFactor;
+		switch(shippingMethod) {
+			case 'usps' :
+				shippingCostPer = 2;
+				break; 
+			case 'ups' :
+				shippingCostPer = 3;
+				break; 
+			default' :
+				shippingCostPer = 0;
+				break; 
+
+		}
+
+		shippingCost = shippingCostPer * totalQty;
+
+		estimate = (totalItemPrice * taxFactor) +shippingCost;
 
 		document.getElementById('txt-estimate').value = estimate;
 	}
