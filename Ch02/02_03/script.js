@@ -1,7 +1,9 @@
 (function() {
 "use strict";
 
-console.log("Hello world.");
-console.error("Åh no something went wrong!");
+var variable = 2, variable2 = "hello";
+
+console.log(variable1);
+console.log(variable1, variable2);
 
 })();
