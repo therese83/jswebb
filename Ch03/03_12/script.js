@@ -33,6 +33,7 @@ function estimateTotal(event) {
 	var itemBball = parseInt(document.getElementById('txt-q-bball').value, 10) || 0,
 		itemJersey = parseInt(document.getElementById('txt-q-jersey').value, 10) || 0,
 		itemPower = parseInt(document.getElementById('txt-q-power').value, 10) || 0,
+		itemWater = pareInt(document.getElementById('txt-g-water').value, 10) || 0,
 		shippingState = state.value,
 		shippingMethod = document.querySelector('[name=r_method]:checked').value || "";
 		
