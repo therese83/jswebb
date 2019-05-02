@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 	var d = new Date();
 	
-	c.innerHTML = d.getHours() + ':' + d.getMinutes();
+	c.innerHTML = (d.getHours() -12) + ':' + d.getMinutes();
 });
 
 
